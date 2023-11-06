@@ -19,6 +19,10 @@ RUN <install some dependencies>
 CMD <command that is executed on `docker container run`>
 ```
 
+## Container
+
+Containers only contain that which is required to execute an application; and you can start, stop and interact with them. They are **isolated** environments in the host machine with the ability to interact with each other and the host machine itself via defined methods (TCP/UDP).
+
 ### Most used commands
 
 | command | explain | shorthand  |
