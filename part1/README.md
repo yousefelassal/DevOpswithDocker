@@ -8,7 +8,7 @@ an image is like a blueprint or template, while a container is an instance of th
 
 ### Image
 
-images are _immutable_, they can not be changed after they are created.
+A Docker image is a file. An image never changes; you can not edit an existing file. Creating a new image happens by starting from a base image and adding new **layers** to it. Images are _immutable_, they can not be changed after they are created.
 
 **Dockerfile**
 ```Dockerfile
