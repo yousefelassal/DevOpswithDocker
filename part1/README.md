@@ -10,6 +10,15 @@ an image is like a blueprint or template, while a container is an instance of th
 
 images are _immutable_, they can not be changed after they are created.
 
+**Dockerfile**
+```Dockerfile
+FROM <image>:<tag>
+
+RUN <install some dependencies>
+
+CMD <command that is executed on `docker container run`>
+```
+
 ### Most used commands
 
 | command | explain | shorthand  |
