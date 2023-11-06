@@ -1,8 +1,12 @@
+# Definitions and basic concepts
+
+
 <div align="center">
-<img src="https://github.com/yousefelassal/DevOpswithDocker/assets/76617202/f4711007-4c06-4d37-b8d2-6866f774e643" height="auto" width="500px" />
+  <br />
+  <img src="https://github.com/yousefelassal/DevOpswithDocker/assets/76617202/f4711007-4c06-4d37-b8d2-6866f774e643" height="auto" width="500px" />
 </div>
 
-# Image and Containers
+## Image and Containers
 
 an image is like a blueprint or template, while a container is an instance of that blueprint or template.
 
@@ -19,7 +23,7 @@ RUN <install some dependencies>
 CMD <command that is executed on `docker container run`>
 ```
 
-## Container
+### Container
 
 Containers only contain that which is required to execute an application; and you can start, stop and interact with them. They are **isolated** environments in the host machine with the ability to interact with each other and the host machine itself via defined methods (TCP/UDP).
 
