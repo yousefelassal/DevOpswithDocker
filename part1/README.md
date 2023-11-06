@@ -6,7 +6,9 @@
 
 an image is like a blueprint or template, while a container is an instance of that blueprint or template.
 
+### Image
 
+images are _immutable_, they can not be changed after they are created.
 
 ### Most used commands
 
