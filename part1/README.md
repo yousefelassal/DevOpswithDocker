@@ -39,3 +39,63 @@ Containers only contain that which is required to execute an application; and yo
 | `docker container rm <container>` | Removes a container | `docker rm` |
 | `docker container stop <container>` | Stops a container | `docker stop`|
 | `docker container exec <container>` | Executes a command inside the container | `docker exec` |
+
+If you have hundreds of stopped containers and you wish to delete them all, you should use 
+- `docker container prune` (deletes all stopped containers)
+- `docker image prune` (remove "dangling" images)
+- `docker system prune` (clears almost everything)
+
+
+# Running and stopping containers
+
+run Ubuntu
+```cmd
+docker run ubuntu
+```
+- `-i` (interactive)
+- `-t` ([tty](https://itsfoss.com/what-is-tty-in-linux/))
+
+```
+docker run -d -it --name looper ubuntu sh -c 'while true; do date; sleep 1; done'
+```
+
+- `docker run -d` run container detached.
+- `-it` is short for `-i` and `-t` allows you to interact with the container by using the command line.
+- Because we ran the container with `--name looper`, we can now reference it easily.
+
+
+### Let's follow `-f` the output of logs with
+```
+$ docker logs -f looper
+  Thu Mar  1 15:51:29 UTC 2023
+  Thu Mar  1 15:51:30 UTC 2023
+  Thu Mar  1 15:51:31 UTC 2023
+  ...
+```
+
+### Let's test pausing the looper without exiting or stopping it.
+- `docker pause looper`
+- `docker unpause looper`
+
+### attach to the running container from the second terminal using `attach`:
+```
+$ docker attach looper
+  Thu Mar  1 15:54:38 UTC 2023
+  Thu Mar  1 15:54:39 UTC 2023
+  ...
+```
+- If we want to attach to a container while making sure we don't close it from the other terminal we can specify to not attach STDIN with `--no-stdin` option.
+- start the stopped container with `docker start looper`
+
+### To terminate the process, stop follows the SIGTERM with a SIGKILL after a grace period. In this case, it's simply faster to use kill.
+```
+$ docker kill looper
+$ docker rm looper
+```
+- Running the previous two commands is basically equivalent to running `docker rm --force looper`
+
+
+```
+$ docker run -d --rm -it --name looper-it ubuntu sh -c 'while true; do date; sleep 1; done'
+```
+`--rm` removes the process automatically after it has exited. The `--rm` ensures that there are no garbage containers left behind. It also means that `docker start` can not be used to start the container after it has exited.
