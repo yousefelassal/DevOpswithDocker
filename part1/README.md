@@ -39,3 +39,6 @@ Containers only contain that which is required to execute an application; and yo
 | `docker container rm <container>` | Removes a container | `docker rm` |
 | `docker container stop <container>` | Stops a container | `docker stop`|
 | `docker container exec <container>` | Executes a command inside the container | `docker exec` |
+
+
+# Running and stopping containers
