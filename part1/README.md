@@ -76,3 +76,11 @@ $ docker logs -f looper
 Let's test pausing the looper without exiting or stopping it.
 - `docker pause looper`
 - `docker unpause looper`
+
+attach to the running container from the second terminal using `attach`:
+```
+$ docker attach looper
+  Thu Mar  1 15:54:38 UTC 2023
+  Thu Mar  1 15:54:39 UTC 2023
+  ...
+```
