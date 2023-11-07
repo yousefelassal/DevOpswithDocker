@@ -47,3 +47,5 @@ run Ubuntu
 ```cmd
 docker run ubuntu
 ```
+- `-i` (interactive)
+- `-t` ([tty](https://itsfoss.com/what-is-tty-in-linux/))
