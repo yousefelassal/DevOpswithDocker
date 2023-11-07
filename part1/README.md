@@ -54,3 +54,25 @@ docker run ubuntu
 ```
 - `-i` (interactive)
 - `-t` ([tty](https://itsfoss.com/what-is-tty-in-linux/))
+
+```
+docker run -d -it --name looper ubuntu sh -c 'while true; do date; sleep 1; done'
+```
+
+- `docker run -d` run container detached.
+- `-it` is short for `-i` and `-t` allows you to interact with the container by using the command line.
+- Because we ran the container with `--name looper`, we can now reference it easily.
+
+
+Let's follow -f the output of logs with
+```
+$ docker logs -f looper
+  Thu Mar  1 15:51:29 UTC 2023
+  Thu Mar  1 15:51:30 UTC 2023
+  Thu Mar  1 15:51:31 UTC 2023
+  ...
+```
+
+Let's test pausing the looper without exiting or stopping it.
+- `docker pause looper`
+- `docker unpause looper`
