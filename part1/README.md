@@ -42,3 +42,8 @@ Containers only contain that which is required to execute an application; and yo
 
 
 # Running and stopping containers
+
+run Ubuntu
+```cmd
+docker run ubuntu
+```
