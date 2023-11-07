@@ -84,4 +84,5 @@ $ docker attach looper
   Thu Mar  1 15:54:39 UTC 2023
   ...
 ```
-If we want to attach to a container while making sure we don't close it from the other terminal we can specify to not attach STDIN with `--no-stdin` option. 
+- If we want to attach to a container while making sure we don't close it from the other terminal we can specify to not attach STDIN with `--no-stdin` option.
+- start the stopped container with `docker start looper`
