@@ -40,6 +40,11 @@ Containers only contain that which is required to execute an application; and yo
 | `docker container stop <container>` | Stops a container | `docker stop`|
 | `docker container exec <container>` | Executes a command inside the container | `docker exec` |
 
+If you have hundreds of stopped containers and you wish to delete them all, you should use 
+- `docker container prune` (deletes all stopped containers)
+- `docker image prune` (remove "dangling" images)
+- `docker system prune` (clears almost everything)
+
 
 # Running and stopping containers
 
