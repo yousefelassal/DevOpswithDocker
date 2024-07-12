@@ -87,6 +87,21 @@ $ docker attach looper
 - If we want to attach to a container while making sure we don't close it from the other terminal we can specify to not attach STDIN with `--no-stdin` option.
 - start the stopped container with `docker start looper`
 
+### Running processes inside a container with docker exec
+execute commands within a running container - `docker exec` command.
+```zsh
+docker exec <CONTAINER> ls -la
+```
+```zsh
+docker exec -it <CONTAINER> bash
+root@2a49df3ba735:/# ps aux
+
+  USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+  root        64  1.5  0.0   4112  3460 pts/1    Ss   12:36   0:00 bash
+  root        80  0.0  0.0   5900  2844 pts/1    R+   12:36   0:00 ps aux
+```
+
+
 ### To terminate the process, stop follows the SIGTERM with a SIGKILL after a grace period. In this case, it's simply faster to use kill.
 ```
 $ docker kill looper
