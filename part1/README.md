@@ -89,10 +89,11 @@ $ docker attach looper
 
 ### Running processes inside a container with docker exec
 execute commands within a running container - `docker exec` command.
-```zsh
+```bash
 docker exec <CONTAINER> ls -la
 ```
-```zsh
+We can execute the Bash shell in the container in interactive mode and then run any commands within that Bash session:
+```bash
 docker exec -it <CONTAINER> bash
 root@2a49df3ba735:/# ps aux
 
@@ -100,7 +101,7 @@ root@2a49df3ba735:/# ps aux
   root        64  1.5  0.0   4112  3460 pts/1    Ss   12:36   0:00 bash
   root        80  0.0  0.0   5900  2844 pts/1    R+   12:36   0:00 ps aux
 ```
-
+we can exit the container with `exit`.
 
 ### To terminate the process, stop follows the SIGTERM with a SIGKILL after a grace period. In this case, it's simply faster to use kill.
 ```
