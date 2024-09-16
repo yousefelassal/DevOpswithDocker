@@ -137,6 +137,27 @@ COPY hello.sh .
 CMD ./hello.sh
 ```
 
+```bash
+docker build with instructions where to build (.) and give it a name (-t <name>):
+
+$ docker build . -t hello-docker
+ => [internal] load build definition from Dockerfile                                                                                                                                              0.0s
+ => => transferring dockerfile: 478B                                                                                                                                                              0.0s
+ => [internal] load metadata for docker.io/library/alpine:3.19                                                                                                                                    2.1s
+ => [auth] library/alpine:pull token for registry-1.docker.io                                                                                                                                     0.0s
+ => [internal] load .dockerignore                                                                                                                                                                 0.0s
+ => => transferring context: 2B                                                                                                                                                                   0.0s
+ => [1/3] FROM docker.io/library/alpine:3.19@sha256:c5b1261d6d3e43071626931fc004f70149baeba2c8ec672bd4f27761f8e1ad6b                                                                              0.0s
+ => [internal] load build context                                                                                                                                                                 0.0s
+ => => transferring context: 68B                                                                                                                                                                  0.0s
+ => [2/3] WORKDIR /usr/src/app                                                                                                                                                                    0.0s
+ => [3/3] COPY hello.sh .                                                                                                                                                                         0.0s
+ => exporting to image                                                                                                                                                                            0.0s
+ => => exporting layers                                                                                                                                                                           0.0s
+ => => writing image sha256:5f8f5d7445f34b0bcfaaa4d685a068cdccc1ed79e65068337a3a228c79ea69c8                                                                                                      0.0s
+ => => naming to docker.io/library/hello-docker
+```
+
 Copying files using `docker cp`
 
 ```bash
