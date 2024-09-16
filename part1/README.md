@@ -117,7 +117,9 @@ $ docker run -d --rm -it --name looper-it ubuntu sh -c 'while true; do date; sle
 ```
 `--rm` removes the process automatically after it has exited. The `--rm` ensures that there are no garbage containers left behind. It also means that `docker start` can not be used to start the container after it has exited.
 
-- Copying files using `docker cp`
+### Images
+
+Copying files using `docker cp`
 
   ```bash
     $ docker ps
