@@ -138,6 +138,7 @@ CMD ./hello.sh
 ```
 
 - [docker build](https://docs.docker.com/engine/reference/commandline/build/) | Docker Docs
+
 `docker build` with instructions where to build (`.`) and give it a name (`-t <name>`):
 ```bash
 $ docker build . -t hello-docker
