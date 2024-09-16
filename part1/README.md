@@ -171,12 +171,13 @@ $ docker cp ./additional.txt zen_rosalind:/usr/src/app/
 ```
 
 `docker diff` to check what has changed
-```bash
-$ docker diff zen_rosalind
-  C /usr
-  C /usr/src
-  C /usr/src/app
-  A /usr/src/app/additional.txt
-  C /root
-  A /root/.ash_history
-```
+  ```bash
+  $ docker diff zen_rosalind
+    C /usr
+    C /usr/src
+    C /usr/src/app
+    A /usr/src/app/additional.txt
+    C /root
+    A /root/.ash_history
+  ```
+  - A = added, D = deleted, C = changed
