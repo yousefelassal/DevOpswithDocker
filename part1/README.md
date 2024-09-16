@@ -121,11 +121,11 @@ $ docker run -d --rm -it --name looper-it ubuntu sh -c 'while true; do date; sle
 
 Copying files using `docker cp`
 
-  ```bash
-    $ docker ps
-    CONTAINER ID   IMAGE          COMMAND   CREATED         STATUS         PORTS     NAMES
-    9c06b95e3e85   hello-docker   "sh"      4 minutes ago   Up 4 minutes             zen_rosalind
+```bash
+$ docker ps
+  CONTAINER ID   IMAGE          COMMAND   CREATED         STATUS         PORTS     NAMES
+  9c06b95e3e85   hello-docker   "sh"      4 minutes ago   Up 4 minutes             zen_rosalind
   
-  $ touch additional.txt
-  $ docker cp ./additional.txt zen_rosalind:/usr/src/app/
-  ```
+$ touch additional.txt
+$ docker cp ./additional.txt zen_rosalind:/usr/src/app/
+```
