@@ -137,9 +137,8 @@ COPY hello.sh .
 CMD ./hello.sh
 ```
 
+`docker build` with instructions where to build (`.`) and give it a name (`-t <name>`):
 ```bash
-docker build with instructions where to build (.) and give it a name (-t <name>):
-
 $ docker build . -t hello-docker
  => [internal] load build definition from Dockerfile                                                                                                                                              0.0s
  => => transferring dockerfile: 478B                                                                                                                                                              0.0s
