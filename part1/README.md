@@ -38,6 +38,7 @@ Containers only contain that which is required to execute an application; and yo
 | `docker container run <image>` | Runs a container from an image | `docker run` |
 | `docker container rm <container>` | Removes a container | `docker rm` |
 | `docker container stop <container>` | Stops a container | `docker stop`|
+| `docker start <container_name_or_id>` | Start an exited container | `docker start <container_id_prefix>` |
 | `docker container exec <container>` | Executes a command inside the container | `docker exec` |
 
 If you have hundreds of stopped containers and you wish to delete them all, you should use 
