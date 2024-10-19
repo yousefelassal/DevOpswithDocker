@@ -192,3 +192,18 @@ $ docker image ls
   hello-docker-additional      latest       2f63baa355ce   3 seconds ago    7.73MB
   hello-docker                 latest       444f21cf7bd5   31 minutes ago   7.73MB
 ```
+
+[ENTRYPOINT](https://docs.docker.com/reference/dockerfile/#entrypoint)
+
+An `ENTRYPOINT` allows you to configure a container that will run as an executable.
+
+`ENTRYPOINT` has two possible forms:
+
+- The exec form, which is the preferred form:
+```
+ENTRYPOINT ["executable", "param1", "param2"]
+```
+- The shell form:
+```
+ENTRYPOINT command param1 param2
+```
