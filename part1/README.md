@@ -181,3 +181,14 @@ $ docker cp ./additional.txt zen_rosalind:/usr/src/app/
     A /root/.ash_history
   ```
   - A = added, D = deleted, C = changed
+
+`docker commit` save the changes as a _new image_:
+
+```
+$ docker commit zen_rosalind hello-docker-additional
+  sha256:2f63baa355ce5976bf89fe6000b92717f25dd91172aed716208e784315bfc4fd
+$ docker image ls
+  REPOSITORY                   TAG          IMAGE ID       CREATED          SIZE
+  hello-docker-additional      latest       2f63baa355ce   3 seconds ago    7.73MB
+  hello-docker                 latest       444f21cf7bd5   31 minutes ago   7.73MB
+```
