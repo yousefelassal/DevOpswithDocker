@@ -200,10 +200,10 @@ An `ENTRYPOINT` allows you to configure a container that will run as an executab
 `ENTRYPOINT` has two possible forms:
 
 - The exec form, which is the preferred form:
-```
+```Dockerfile
 ENTRYPOINT ["executable", "param1", "param2"]
 ```
 - The shell form:
-```
+```Dockerfile
 ENTRYPOINT command param1 param2
 ```
