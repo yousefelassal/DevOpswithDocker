@@ -214,6 +214,8 @@ So a volume is simply a folder (or a file) that is shared between the host machi
 ```
 $ docker run -v "$(pwd):/mydir" yt-dlp https://www.youtube.com/watch?v=DptFY_MszQs
 ```
+start a container with `-v` option, that requires an absolute path. We mount our current folder as /mydir in our container, overwriting everything that we have put in that folder in our Dockerfile.
+
 
 <div align="center">
   <br />
