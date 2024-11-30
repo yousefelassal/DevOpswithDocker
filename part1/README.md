@@ -207,3 +207,10 @@ ENTRYPOINT ["executable", "param1", "param2"]
 ```Dockerfile
 ENTRYPOINT command param1 param2
 ```
+
+### volumes
+So a volume is simply a folder (or a file) that is shared between the host machine and the container. If a file in volume is modified by a program that's running inside the container the changes are also saved from destruction when the container is shut down as the file exists on the host machine.
+
+```
+$ docker run -v "$(pwd):/mydir" yt-dlp https://www.youtube.com/watch?v=DptFY_MszQs
+```
