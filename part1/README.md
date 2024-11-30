@@ -214,3 +214,10 @@ So a volume is simply a folder (or a file) that is shared between the host machi
 ```
 $ docker run -v "$(pwd):/mydir" yt-dlp https://www.youtube.com/watch?v=DptFY_MszQs
 ```
+
+<div align="center">
+  <br />
+  <img src="https://github.com/user-attachments/assets/20277c3a-88fb-4491-84c4-acdf89201bec" height="auto" width="500px" />
+</div>
+
+
