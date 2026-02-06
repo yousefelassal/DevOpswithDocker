@@ -54,3 +54,4 @@ services:
   database:
     image: postgres:17
 ```
+Both of the containers can now be started with command `docker compose up`
