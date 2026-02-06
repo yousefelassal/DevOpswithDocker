@@ -1,4 +1,7 @@
 services:
   yt-dlp-ubuntu:
-    image: yousefelassal/yt-dlp-ubuntu
+    image: devuser/repo
     build: .
+    volumes:
+      - .:/mydir
+    container_name: yt-dlp
