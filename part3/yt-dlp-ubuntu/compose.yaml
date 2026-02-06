@@ -1,0 +1,4 @@
+services:
+  yt-dlp-ubuntu:
+    image: yousefelassal/yt-dlp-ubuntu
+    build: .
