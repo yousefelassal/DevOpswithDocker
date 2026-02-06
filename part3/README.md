@@ -43,3 +43,14 @@ We can also give the container a name it will use when running with container_na
 docker compose run yt-dlp-ubuntu https://www.youtube.com/watch?v=saEpkcVi1d4
 ```
 
+### Using a ready image
+
+It is pretty common that we use some readily built images, and in that case, the key build is not needed. We could e.g., use the following docker-compose.yaml file to define two containers, one based on image [nginx:1.27](https://hub.docker.com/_/nginx) and the other based on [postgres:17](https://hub.docker.com/_/postgres):
+
+```yaml
+services:
+  nginx:
+    image: nginx:1.27
+  database:
+    image: postgres:17
+```
