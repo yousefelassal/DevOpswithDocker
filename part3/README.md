@@ -82,3 +82,14 @@ docker compose ps
 ```
 
 Full list of Compose CLI Commands can be found [here](https://docs.docker.com/reference/cli/docker/compose/).
+
+### [Environment Variables](https://docs.docker.com/compose/how-tos/environment-variables/set-environment-variables/)
+
+```yaml
+services:
+  backend:
+    image:
+    environment:
+      - VARIABLE=VALUE
+      - VARIABLE2=VALUE2
+```
