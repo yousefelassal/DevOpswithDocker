@@ -25,6 +25,8 @@ docker compose push
 
 ### [Volumes](https://docs.docker.com/engine/storage/volumes/#use-a-volume-with-docker-compose)
 
+We will need to add the volume bind mounts. Volumes in Docker Compose are defined with the following syntax location-in-host:location-in-container. Compose can work without an absolute path:
+
 ```yaml
 services:
   yt-dlp-ubuntu:
@@ -34,3 +36,10 @@ services:
       - .:/mydir
     container_name: yt-dlp
 ```
+
+We can also give the container a name it will use when running with container_name. The service name can be used to run the container:
+
+```bash
+docker compose run yt-dlp-ubuntu https://www.youtube.com/watch?v=saEpkcVi1d4
+```
+
