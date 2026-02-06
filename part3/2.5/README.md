@@ -1,3 +1,3 @@
 ```bash
-docker-compose up -d --scale compute=3
+docker compose up -d --scale compute=3
 ```
