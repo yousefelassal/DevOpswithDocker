@@ -93,3 +93,18 @@ services:
       - VARIABLE=VALUE
       - VARIABLE2=VALUE2
 ```
+
+### Manual network definition
+
+```yaml
+services:
+  db:
+    image: postgres:13.2-alpine
+    networks:
+      - database-network <em># Name in this Docker Compose file</em>
+
+networks:
+  database-network: <em># Name in this Docker Compose file</em>
+    name: database-network <em># Name that will be the actual name of the network</em>
+```
+
