@@ -22,3 +22,15 @@ Now we can build and push with just these commands:
 docker compose build
 docker compose push
 ```
+
+### [Volumes](https://docs.docker.com/engine/storage/volumes/#use-a-volume-with-docker-compose)
+
+```yaml
+services:
+  yt-dlp-ubuntu:
+    image: <username>/<repositoryname>
+    build: .
+    volumes:
+      - .:/mydir
+    container_name: yt-dlp
+```
