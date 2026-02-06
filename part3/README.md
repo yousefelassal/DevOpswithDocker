@@ -108,3 +108,17 @@ networks:
     name: database-network <em># Name that will be the actual name of the network</em>
 ```
 
+Establishing a connection to an external network (that is, a network defined in another docker-compose.yaml, or by some other means) is done as follows:
+
+```yaml
+services:
+  db:
+    image: backend-image
+    networks:
+      - database-network
+
+networks:
+  database-network:
+    external:
+      name: database-network # Must match the actual name of the network
+```
