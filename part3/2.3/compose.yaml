@@ -8,6 +8,7 @@ services:
     environment:
       - REDIS_HOST=redis
       - POSTGRES_HOST=db
+      - REQUEST_ORIGIN=*
     depends_on:
       - redis
       - db
