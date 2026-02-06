@@ -55,3 +55,28 @@ services:
     image: postgres:17
 ```
 Both of the containers can now be started with command `docker compose up`
+
+### Key Commands
+
+To start all the services defined in the docker-compose.yaml file:
+
+```bash
+docker compose up
+```
+
+To stop and remove the running services:
+```bash
+docker compose down
+```
+
+If you want to monitor the output of the running containers and debug issues, we can view the logs with:
+
+```bash
+docker compose logs
+```
+
+To lists all the services along with their current status:
+
+```bash
+docker compose ps
+```
