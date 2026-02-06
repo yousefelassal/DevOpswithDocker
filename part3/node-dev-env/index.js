@@ -2,7 +2,7 @@ const express = require('express')
 const app = express()
 
 const plus = (x, y) => {
-  return x - y
+  return x + y
 }
 
 app.get('/plus', (req, res) => {
