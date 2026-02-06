@@ -80,3 +80,5 @@ To lists all the services along with their current status:
 ```bash
 docker compose ps
 ```
+
+Full list of Compose CLI Commands can be found [here](https://docs.docker.com/reference/cli/docker/compose/).
