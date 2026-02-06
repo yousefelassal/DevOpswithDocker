@@ -101,11 +101,11 @@ services:
   db:
     image: postgres:13.2-alpine
     networks:
-      - database-network <em># Name in this Docker Compose file</em>
+      - database-network # Name in this Docker Compose file
 
 networks:
-  database-network: <em># Name in this Docker Compose file</em>
-    name: database-network <em># Name that will be the actual name of the network</em>
+  database-network: # Name in this Docker Compose file
+    name: database-network # Name that will be the actual name of the network
 ```
 
 Establishing a connection to an external network (that is, a network defined in another docker-compose.yaml, or by some other means) is done as follows:
